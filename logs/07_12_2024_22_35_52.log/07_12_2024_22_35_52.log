@@ -1,0 +1,19 @@
+[ 2024-07-12 22:36:37,406 ] 5 root - INFO - Started data ingestion component
+[ 2024-07-12 22:36:37,478 ] 8 root - INFO - Read the required data as pandas dataframe
+[ 2024-07-12 22:36:37,494 ] 11 root - INFO - Applied necessary data cleaning and feature engineering techniques
+[ 2024-07-12 22:36:37,520 ] 14 root - INFO - Initiating train test split
+[ 2024-07-12 22:36:37,542 ] 20 root - INFO - Data Ingestion is completed
+[ 2024-07-12 22:36:37,545 ] 65 root - INFO - Loaded train and test dataset
+[ 2024-07-12 22:36:37,545 ] 66 root - INFO - Obtaining preprocessor object
+[ 2024-07-12 22:36:37,545 ] 44 root - INFO - Handled missing values for both numerical and categorical features
+[ 2024-07-12 22:36:37,545 ] 45 root - INFO - Numerical features are scaled
+[ 2024-07-12 22:36:37,545 ] 46 root - INFO - Categorical features are encoded using OneHotEncoder
+[ 2024-07-12 22:36:37,554 ] 78 root - INFO - Applying preprocessor object on training and testing dataframe
+[ 2024-07-12 22:36:37,595 ] 91 root - INFO - Saved Preprocessing object successfully
+[ 2024-07-12 22:36:37,595 ] 27 root - INFO - Splitting trainig and test input data
+[ 2024-07-12 22:41:47,478 ] 88 root - INFO - Found best model on training and testing data
+[ 2024-07-12 22:41:47,578 ] 95 root - INFO - Saved the best model successfully
+[ 2024-07-12 22:47:01,167 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5001
+[ 2024-07-12 22:47:01,169 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-07-12 22:47:01,231 ] 96 werkzeug - INFO -  * Restarting with watchdog (windowsapi)
