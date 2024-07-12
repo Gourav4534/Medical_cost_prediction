@@ -19,33 +19,6 @@ The [Medical Cost Prediction](https://www.kaggle.com/datasets/mirichoi0218/insur
     
 11) ``region``: What region the individual belongs to - Northeast, Northwest, Southeast, Southwest
 
-## Getting Started (Cloning)
-Clone the repo using 
-```
-git clone https://github.com/NvkAnirudh/Medical_Cost_Prediction.git
-```
-## Installing 
-Install the required packages from ``requirements.txt`` after commenting out ``-e .`` which runs ``setup.py`` automatically.
-```
-pip install -r requirements.txt
-```
-## Usage
-1) Once cloned, run the ``data_ingestion.py`` script to load, transform, and train different ML algorithms (Regression) on loaded data. This script creates all the required artifacts (train, test, and validation data, model, and preprocessor pickle files).
-
-Model.pkl will have the best model with the best parameters from different models used.
-```
-python src/components/data_ingestion.py
-``` 
-2) After the training, run the test script ``test.py`` in the Tests folder to get the r2 score from the best model on test data.
-```
-python Tests/test.py
-```
-3) Run the ``application.py`` which is a Flask application to get the required UI locally.
-```
-python application.py
-```
-And, that's it, the application should run perfectly locally, and you can test the UI out and play with it.
-
 
 ## Authors   
 - Gourav Yadav
