@@ -2,7 +2,7 @@ Metadata-Version: 2.1
 Name: Medical-Cost-Prediction
 Version: 0.0.1
 Author: Gourav Yadav
-Author-email: gouravyadav684.com
+Author-email: gouravyadav684@gmail.com
 Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: seaborn
