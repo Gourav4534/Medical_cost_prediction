@@ -46,43 +46,6 @@ python application.py
 ```
 And, that's it, the application should run perfectly locally, and you can test the UI out and play with it.
 
-## Deployment using AWS ECR and AWS EC2
-1) Create a docker image and check if it is working locally.
-2) Add workflows to your GitHub repo. The ``.yaml`` script can be found in ``Actions`` section of the repo. Choose the appropriate deployment method to get the script, ``Amazon ECS`` in this case.
-3) Create an IAM User - with ``AmazonEC2ContainerRegistryFullAccess`` and ``AmazonEC2FullAccess`` policies attached - and create access keys
-4) Create a new ECR repository 
-5) Create an EC2 instance with enough disk space
-6) Once created, connect to the instance and install the necessary packages for docker:
-
-        sudo apt-get update -y
-
-        sudo apt-get upgrade
-        
-        curl -fsSL https://get.docker.com -o get-docker.sh
-        
-        sudo sh get-docker.sh
-        
-        sudo usermod -aG docker ubuntu
-        
-        newgrp docker 
-
-7) Initiate Runner setup (Github Repo -> Settings -> Actions (on the LHS) -> Under Actions, click Runners
-8) Download and Configure the runner on the EC2 instance using the commands mentioned when you create a new runner (in the path mentioned above).
-9) Create 5 secret keys in GitHub Actions:
-    - ``AWS_ACCESS_KEY_ID``: Access key received when you create access keys with your IAM User
-      
-    - ``AWS_SECRET_ACCESS_KEY``: Secret Access key received when you create access keys with your IAM User
-      
-    - ``AWS_REGION``: Region of your EC2 instance
-      
-    - ``AWS_ECR_LOGIN_URI``: ECR repository's login URI
-      
-    - ``ECR_REPOSITORY_NAME``: Name of the ECR repository created
 
 ## Authors   
 - Gourav Yadav
-
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/NvkAnirudh/Medical_Cost_Prediction/blob/main/LICENSE) file for details
-
-
