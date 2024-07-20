@@ -1,5 +1,7 @@
 # Medical Cost Prediction
 
+https://medical-cost-prediction-99x5.onrender.com/prediction
+
 ## Dataset
 The [Medical Cost Prediction](https://www.kaggle.com/datasets/mirichoi0218/insurance) consists of around 1300 records and six independent variables along with ``charges`` target  variable:
 
