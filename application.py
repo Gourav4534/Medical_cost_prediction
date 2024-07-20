@@ -1,20 +1,17 @@
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
-
-
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.prediction_pipeline import InputData, PreditctPipeline
+import os
 
-# Flask(__name__) gives us the entry point
 app = Flask(__name__)
 
-# Route for home page
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/prediction', methods=['GET','POST'])
+@app.route('/prediction', methods=['GET', 'POST'])
 def predict_data():
     if request.method == 'GET':
         return render_template('home.html')
@@ -28,13 +25,13 @@ def predict_data():
             region=request.form.get('region'),
         )
 
-
         data_df = data.get_data_as_dataFrame()
         print(data_df)
 
         predict_pipeline = PreditctPipeline()
         predictions = predict_pipeline.predict(data_df)
-        return render_template('home.html', results=round(predictions[0],2))
+        return render_template('home.html', results=round(predictions[0], 2))
 
-if __name__=="__main__":
-    app.run(host="localhost",debug=True, port=5001)
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
